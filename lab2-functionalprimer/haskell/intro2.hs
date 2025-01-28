@@ -21,14 +21,14 @@ prg1' = sequence_ [print "hello ", print name]
 -- one imperative program passing value to another:
 prg2 = do
   line <- getLine
-  putStrLn ("you typed: " ++ line)
+  putStrLn ("you typed: " ++ line) -- // Prints Input
 
 main =
   do
-  putStrLn name -- like print, but only for strings
+  putStrLn name -- like print, but only for strings // Prints Alice
   -- putStrLn pname3 -- Couldn't match type ...; Expected type: String; Actual type: IO ()
-  pname3 -- in Lisp: eval pname3
-  myprogram; prg1; prg2 -- sequencing, like 3 lines
+  pname3 -- in Lisp: eval pname3 // Prints Bob
+  myprogram; prg1; prg2 -- sequencing, like 3 lines // Prints 2 // Prints "hello " // Prints "Alice"
 
 
 -- generic string conversion, using a Java-friendly name:
